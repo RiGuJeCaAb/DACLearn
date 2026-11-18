@@ -2,6 +2,12 @@
 
 Formato: [Keep a Changelog](https://keepachangelog.com/pt-PT/1.1.0/). As versões da solução são as do portal (`1.0.0.N`).
 
+## Solução 1.0.0.3 · 2026-11-18
+
+- "Contoso Coffee Machines Learn": tabulador retirado do fim de cinco textos (`Label5`, `Button2` e `Button3` no Home Screen, `Button5` no Admin Screen, `Button4` no Catalog Screen). Guardada e publicada no Studio.
+- Exportação pela Web API, como a 1.0.0.2. Não gerida, 798 426 bytes, SHA-256 `056fea54c6ad1a2172b6579f6fc37be12e092328b0763d1d04a68149ee856699`.
+- `learn validar`: 0 erros e 0 avisos. Só mudaram os ficheiros desta app.
+
 ## Solução 1.0.0.2 · 2026-11-18
 
 - Primeira exportação depois das correções de acessibilidade de 12/11/2026. Não gerida, 798 403 bytes, SHA-256 `0caaf1dacc8e6da2a013438eff7e02dc37f22e61b95246ccbdceed98a98dc9f5`.

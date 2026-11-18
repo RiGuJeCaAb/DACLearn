@@ -45,7 +45,7 @@ Screens:
             PressedBorderColor: =Self.Fill
             PressedColor: =Self.Fill
             PressedFill: =Self.Color
-            Text: ="Voltar	"
+            Text: ="Voltar"
             X: =1180
             Y: =700
       - Icon1:

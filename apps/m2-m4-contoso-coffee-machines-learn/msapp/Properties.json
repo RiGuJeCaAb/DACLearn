@@ -125,9 +125,9 @@
     "combobox": 1,
     "button": 5,
     "dropdown": 1,
-    "timer": 1,
-    "circle": 1
+    "circle": 1,
+    "timer": 1
   },
-  "DeserializationLoadTime": 1.1580711,
-  "AnalysisLoadTime": 0.88947
+  "DeserializationLoadTime": 1.149072,
+  "AnalysisLoadTime": 0.8547269
 }

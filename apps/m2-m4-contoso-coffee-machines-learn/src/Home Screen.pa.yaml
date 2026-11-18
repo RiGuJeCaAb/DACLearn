@@ -46,7 +46,7 @@ Screens:
             PressedBorderColor: =Self.Fill
             PressedColor: =Self.Fill
             PressedFill: =Self.Color
-            Text: ="Exibir Catálogo	"
+            Text: ="Exibir Catálogo"
             Width: =250
             X: =200
             Y: =200
@@ -66,7 +66,7 @@ Screens:
             PressedBorderColor: =Self.Fill
             PressedColor: =Self.Fill
             PressedFill: =Self.Color
-            Text: ="Admin Screen	"
+            Text: ="Admin Screen"
             Width: =250
             X: =200
             Y: =350
@@ -99,7 +99,7 @@ Screens:
             Color: =Color.White
             Font: =Font.'Open Sans'
             Height: =32
-            Text: ="Screen Navigation	"
+            Text: ="Screen Navigation"
             Width: =250
             X: =80
       - Image4:

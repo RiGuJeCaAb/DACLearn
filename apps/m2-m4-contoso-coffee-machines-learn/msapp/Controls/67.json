@@ -690,7 +690,7 @@
           {
             "Property": "Text",
             "Category": "Data",
-            "InvariantScript": "\"Screen Navigation\t\"",
+            "InvariantScript": "\"Screen Navigation\"",
             "RuleProviderType": "Unknown"
           },
           {
@@ -2345,7 +2345,7 @@
           {
             "Property": "Text",
             "Category": "Data",
-            "InvariantScript": "\"Exibir Catálogo\t\"",
+            "InvariantScript": "\"Exibir Catálogo\"",
             "RuleProviderType": "Unknown"
           },
           {
@@ -2684,7 +2684,7 @@
           {
             "Property": "Text",
             "Category": "Data",
-            "InvariantScript": "\"Admin Screen\t\"",
+            "InvariantScript": "\"Admin Screen\"",
             "RuleProviderType": "Unknown"
           },
           {

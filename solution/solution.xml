@@ -7,7 +7,7 @@
     <Descriptions>
       <Description description="Exercícios do percurso Microsoft Learn &quot;Create a canvas app in Power Apps&quot; (6 módulos), com dados Contoso Coffee em Dataverse." languagecode="2070" />
     </Descriptions>
-    <Version>1.0.0.2</Version>
+    <Version>1.0.0.3</Version>
     <Managed>0</Managed>
     <Publisher>
       <UniqueName>daccc</UniqueName>

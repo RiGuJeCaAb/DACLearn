@@ -2,7 +2,7 @@
 
 > Gerado por `python -m tools.learn inventario`. Não editar à mão.
 
-Solução **DACLearn** 1.0.0.2, não gerida, editor `daccc` (prefixo `dac`).
+Solução **DACLearn** 1.0.0.3, não gerida, editor `daccc` (prefixo `dac`).
 
 | Pasta | App | Módulo | Passagem | Tipo | Ecrãs | Controlos |
 |---|---|---|---|---|---|---|

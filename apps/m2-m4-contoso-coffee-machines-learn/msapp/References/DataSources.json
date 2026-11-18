@@ -8,8 +8,8 @@
       "RelatedEntityName": "Machines",
       "RelatedColumnInvariantName": "statecode",
       "OptionSetInfoNameMapping": {
-        "0": "Ativo",
-        "1": "Inativo"
+        "1": "Inativo",
+        "0": "Ativo"
       },
       "OptionSetIsGlobal": false,
       "OptionSetIsBooleanValued": false,
@@ -29,8 +29,8 @@
       "RelatedEntityName": "Machines",
       "RelatedColumnInvariantName": "statuscode",
       "OptionSetInfoNameMapping": {
-        "2": "Inativo",
-        "1": "Ativo"
+        "1": "Ativo",
+        "2": "Inativo"
       },
       "OptionSetIsGlobal": false,
       "OptionSetIsBooleanValued": false,
@@ -50,8 +50,8 @@
       "RelatedEntityName": "Machine Types",
       "RelatedColumnInvariantName": "statecode",
       "OptionSetInfoNameMapping": {
-        "0": "Ativo",
-        "1": "Inativo"
+        "1": "Inativo",
+        "0": "Ativo"
       },
       "OptionSetIsGlobal": false,
       "OptionSetIsBooleanValued": false,
@@ -71,8 +71,8 @@
       "RelatedEntityName": "Machine Types",
       "RelatedColumnInvariantName": "statuscode",
       "OptionSetInfoNameMapping": {
-        "2": "Inativo",
-        "1": "Ativo"
+        "1": "Ativo",
+        "2": "Inativo"
       },
       "OptionSetIsGlobal": false,
       "OptionSetIsBooleanValued": false,
@@ -90,11 +90,11 @@
       "DisplayName": "Machines (Vistas)",
       "RelatedEntityName": "Machines",
       "ViewInfoNameMapping": {
-        "8ba01601-e3f8-4503-b47a-eb832e517495": "Entidades Machines Inativas",
-        "9732abc8-d8a5-4fc5-a019-571a2fd64fb5": "Entidades Machines Ativas",
         "682dee69-5935-435b-a8d6-41f6479dc75d": "Vista Localização Avançada de Machine",
+        "9732abc8-d8a5-4fc5-a019-571a2fd64fb5": "Entidades Machines Ativas",
         "7df250cd-96b1-46ea-bf4c-556fe41ea124": "Vista de Pesquisa de Machine",
-        "1b066a95-0733-43c7-9439-f630cf1c50ac": "Vista Associada de Machine"
+        "1b066a95-0733-43c7-9439-f630cf1c50ac": "Vista Associada de Machine",
+        "8ba01601-e3f8-4503-b47a-eb832e517495": "Entidades Machines Inativas"
       }
     },
     {
@@ -103,11 +103,11 @@
       "DisplayName": "Machine Types (Vistas)",
       "RelatedEntityName": "Machine Types",
       "ViewInfoNameMapping": {
+        "749b2252-1bd6-4978-8aa0-6134513d4d2e": "Vista de Pesquisa de Machine Type",
+        "be299f18-0b7d-4fcd-9f0b-271d3ca30f58": "Entidades Machine Types Inativas",
         "947d6dbc-f3ca-43c5-b538-93f739da05e6": "Entidades Machine Types Ativas",
         "d1f97a92-0f29-418c-a051-26acc8e9f319": "Vista Localização Avançada de Machine Type",
-        "be299f18-0b7d-4fcd-9f0b-271d3ca30f58": "Entidades Machine Types Inativas",
-        "6d74f68f-8771-4ee5-8d06-7e5031211736": "Vista Associada de Machine Type",
-        "749b2252-1bd6-4978-8aa0-6134513d4d2e": "Vista de Pesquisa de Machine Type"
+        "6d74f68f-8771-4ee5-8d06-7e5031211736": "Vista Associada de Machine Type"
       }
     },
     {

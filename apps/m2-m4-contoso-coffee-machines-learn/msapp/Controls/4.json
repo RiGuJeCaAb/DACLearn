@@ -829,7 +829,7 @@
             "Property": "TabIndex",
             "Category": "Design",
             "InvariantScript": "0",
-            "RuleProviderType": "User"
+            "RuleProviderType": "Unknown"
           },
           {
             "Property": "OnSelect",
@@ -1091,7 +1091,7 @@
             "Property": "TabIndex",
             "Category": "Design",
             "InvariantScript": "0",
-            "RuleProviderType": "User"
+            "RuleProviderType": "Unknown"
           },
           {
             "Property": "OnSelect",
@@ -1372,7 +1372,7 @@
             "Property": "TabIndex",
             "Category": "Design",
             "InvariantScript": "0",
-            "RuleProviderType": "User"
+            "RuleProviderType": "Unknown"
           }
         ],
         "ControlPropertyState": [
@@ -18337,7 +18337,7 @@
           {
             "Property": "Text",
             "Category": "Data",
-            "InvariantScript": "\"Voltar\t\"",
+            "InvariantScript": "\"Voltar\"",
             "RuleProviderType": "Unknown"
           },
           {

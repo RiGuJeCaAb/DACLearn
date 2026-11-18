@@ -45,3 +45,10 @@ A validação deixou 5 avisos, todos na "Contoso Coffee Machines Learn". Há um 
 O tabulador terá vindo com o texto copiado do Learn. O Verificador do Studio não o assinala. Mesmo assim é lixo dentro do texto do botão, e uma comparação com `"Voltar"` daria falso.
 
 O Studio exporta estes valores sem aspas YAML, coisa que o PyYAML recusa. A ferramenta lê-os na mesma, troca o tabulador por um espaço só para a análise, e reporta a linha. A correção certa é no Studio, apagando o tabulador em cada texto.
+
+## 18/11/2026 · correção e exportação 1.0.0.3
+
+Os cinco textos foram corrigidos no Studio, no campo Texto de cada controlo: `Label5`, `Button2` e `Button3` no Home Screen, `Button5` no Admin Screen e `Button4` no Catalog Screen. A app foi guardada e publicada.
+
+Na exportação 1.0.0.3, a validação dá 0 erros e 0 avisos nas 9 apps. O `git diff` de `src/` mostra só as cinco linhas, todas na "Contoso Coffee Machines Learn".
+

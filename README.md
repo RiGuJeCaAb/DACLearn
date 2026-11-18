@@ -12,7 +12,7 @@ Os exercícios práticos dos seis módulos estão feitos. Os Módulos 2, 3, 4 e 
 
 O Verificador de soluções dá 0 problemas desde 12/11/2026 às 09:04, depois da correção de 97 avisos de acessibilidade.
 
-O repositório tem a exportação **1.0.0.2** (18/11/2026), a primeira depois dessas correções. A validação passa sem erros nas 9 apps e deixa 5 avisos de tabuladores colados em textos, descritos em [`docs/qualidade.md`](docs/qualidade.md).
+O repositório tem a exportação **1.0.0.3** (18/11/2026). A validação passa nas 9 apps sem erros nem avisos, depois de corrigidos no Studio cinco textos com um tabulador colado (registo em [`docs/qualidade.md`](docs/qualidade.md)).
 
 ## Onde está o quê
 
