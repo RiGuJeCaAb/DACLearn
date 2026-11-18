@@ -130,3 +130,16 @@ def test_learn_yaml_do_repositorio_e_coerente():
 def test_slug():
     assert projeto.slug("DACLearn M3 UI") == "daclearn-m3-ui"
     assert projeto.slug("Ação  Única!") == "acao-unica"
+
+
+def test_tabulador_dentro_de_valor_e_aviso_e_nao_erro(repo, zipf, capsys):
+    """O Studio exporta `Text: ="Voltar<TAB>"` sem aspas YAML. O PyYAML recusa, a ferramenta avisa."""
+    correr(repo, "sincronizar", str(zipf), "--sem-docs")
+    ecra = repo / "apps" / "m2-m4-contoso-coffee-machines-learn" / "src" / "Catalog Screen.pa.yaml"
+    original = ecra.read_text(encoding="utf-8").replace('="Admin"', '="Admin\t"')
+    ecra.write_text(original, encoding="utf-8")
+    assert correr(repo, "validar") == 0
+    out = capsys.readouterr().out
+    assert "AVISO" in out and "Catalog Screen.pa.yaml:" in out and "1 aviso(s)" in out
+    assert ecra.read_text(encoding="utf-8") == original          # o ficheiro não é alterado
+    assert correr(repo, "inventario") == 0                         # o inventário também lê

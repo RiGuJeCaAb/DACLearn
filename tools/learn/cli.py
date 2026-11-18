@@ -133,16 +133,19 @@ def cmd_validar(a) -> int:
     raiz = Path(a.raiz)
     schema = yaml.safe_load((raiz / "schemas" / "pa.schema.v3.0.yaml").read_text(encoding="utf-8"))
     validador = jsonschema.Draft7Validator(schema)
-    erros = 0
+    erros = avisos = 0
     ficheiros = projeto.ficheiros_src(raiz)
     for f in ficheiros:
         rel = f.relative_to(raiz)
         try:
-            d = yamlio.ler(f)
+            d, tabs = yamlio.ler_tolerante(f)
         except yaml.YAMLError as e:
             _p(f"ERRO {rel}: YAML inválido: {e}")
             erros += 1
             continue
+        for n in tabs:
+            avisos += 1
+            _p(f"AVISO {rel}:{n}: tabulador dentro de um valor (o Studio aceita, mas é quase sempre um texto colado com lixo)")
         if not isinstance(d, dict):
             _p(f"ERRO {rel}: documento vazio ou não é um mapa")
             erros += 1
@@ -159,7 +162,7 @@ def cmd_validar(a) -> int:
         if not (p / "src").exists():
             _p(f"ERRO apps/{p.name}: falta src/ (corra 'learn sincronizar')")
             erros += 1
-    _p(f"validar: {len(projeto.pastas_apps(raiz))} app(s), {len(ficheiros)} ficheiro(s), {erros} erro(s)")
+    _p(f"validar: {len(projeto.pastas_apps(raiz))} app(s), {len(ficheiros)} ficheiro(s), {erros} erro(s), {avisos} aviso(s)")
     return 1 if erros else 0
 
 
@@ -168,7 +171,7 @@ def cmd_validar(a) -> int:
 def _resumo_app(pasta: Path) -> dict:
     ecras, componentes, tipos, n = [], [], Counter(), 0
     for f in sorted((pasta / "src").rglob("*.pa.yaml")):
-        d = yamlio.ler(f) or {}
+        d = yamlio.ler_tolerante(f)[0] or {}
         ecras += list((d.get("Screens") or {}).keys())
         componentes += list((d.get("ComponentDefinitions") or {}).keys())
         for c in yamlio.controlos(d):
@@ -297,7 +300,7 @@ def cmd_pt(a) -> int:
     if not pasta.exists():
         raise SystemExit(f"Não existe apps/{a.app}. Apps: {', '.join(p.name for p in projeto.pastas_apps(raiz))}")
     for f in sorted((pasta / "src").rglob("*.pa.yaml")):
-        d = yamlio.ler(f) or {}
+        d = yamlio.ler_tolerante(f)[0] or {}
         if a.ecra and a.ecra not in (d.get("Screens") or {}) and a.ecra != f.stem.replace(".pa", ""):
             continue
         _p(f"# {f.relative_to(pasta)}")
