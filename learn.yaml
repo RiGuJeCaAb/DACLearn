@@ -5,7 +5,7 @@
 
 solucao:
   nome: DACLearn
-  nome_visivel: "DAC Learn - Create a canvas app"
+  nome_visivel: "DAC Learn · Create a canvas app"
   editor: daccc
   prefixo: dac
   ambiente: 94d3a652-b3a8-e2dd-9b54-025090fe6659

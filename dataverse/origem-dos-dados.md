@@ -16,7 +16,7 @@ O `CoffeeMachineData.xlsx` (`power-apps/coffee-machine-data/`) tem as mesmas 96 
 
 **Machine Type** (`dac_machinetype`) tem 4 registos, os tipos distintos da coluna Machine Type. São At Home Espresso Machine (ID 1, 12 máquinas), Commercial Espresso Machines (ID 2, 24), At Home Coffee Makers (ID 3, 40) e Commercial Coffee Makers (ID 4, 20).
 
-**Machine** (`dac_machine`) tem os 96 registos da folha Machines, com uma pesquisa para Machine Type em vez do texto e do ID repetidos. As cores são Black e Red (24 cada) e Silver, Blue, Green e White (12 cada).
+**Machine** (`dac_machine`) tem os 96 registos da folha Machines. O texto do tipo foi trocado por uma pesquisa para Machine Type (`dac_machinetype`), e o número do Excel ficou ao lado, na coluna Machine Type ID (`dac_machinetypenumber`). As cores são Black e Red (24 cada) e Silver, Blue, Green e White (12 cada), guardadas como texto.
 
 **ProductInventory** (`dac_productinventory`) foi criada pelo Copilot no Módulo 1. Tem 30 registos e colunas de escolha para a linha, o tipo e a cor. Não vem de nenhum ficheiro.
 
@@ -26,7 +26,7 @@ A coluna Avg. Cups/Week traz um tabulador no início de alguns valores (por exem
 
 O livro tem uma folha escondida (`hiddenSheet`) com metadados de uma exportação antiga do Dataverse, com o prefixo `contoso_`. Não foi importada.
 
-O tipo de máquina é guardado uma vez na tabela Machine Type e referenciado por pesquisa, em vez de repetido em cada máquina como no Excel.
+O nome do tipo de máquina é guardado uma vez na tabela Machine Type e cada máquina aponta para ele por pesquisa, em vez de repetir o texto como no Excel. A relação está configurada com Restringir, por isso um tipo com máquinas associadas não pode ser eliminado.
 
 ## Licença
 

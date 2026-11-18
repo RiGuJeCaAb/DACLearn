@@ -16,6 +16,8 @@ No Studio, cada app é guardada e publicada. Depois, em **Soluções**, escolhe-
 
 Em **Soluções › DACLearn › Exportar**, a exportação é **Não gerida**, com o verificador ativo. O portal propõe a versão seguinte, que se aceita.
 
+A 1.0.0.2 foi exportada pela Web API do Dataverse, a partir de `https://org0f43a370.crm4.dynamics.com` com a sessão do browser. A sequência foi `POST PublishAllXml`, depois `PATCH solutions(<id>)` com a versão nova e, por fim, `POST ExportSolution` com `{"SolutionName": "DACLearn", "Managed": false}`. A resposta traz o zip em base64 no campo `ExportSolutionFile`. Por esta via o verificador não corre, por isso convém corrê-lo antes no portal.
+
 ## 2. Sincronizar
 
 ```bash

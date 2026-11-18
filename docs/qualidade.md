@@ -35,3 +35,13 @@ A exportação 1.0.0.1 é das 08:25, antes destas correções. A primeira export
 ## Verificação no repositório
 
 Depois da sincronização, `python -m tools.learn validar` confirma o YAML, o schema oficial e a sintaxe das fórmulas em todas as apps. O CI corre-o em cada push.
+
+## 18/11/2026 · exportação 1.0.0.2 no repositório
+
+Os 27 ficheiros `.pa.yaml` das 9 apps cumprem o schema oficial v3.0, sem nenhum erro de fórmula.
+
+A validação deixou 5 avisos, todos na "Contoso Coffee Machines Learn". Há um tabulador no fim de cinco textos visíveis: "Voltar" no Admin Screen e no Catalog Screen, e "Exibir Catálogo", "Admin Screen" e "Screen Navigation" no Home Screen.
+
+O tabulador terá vindo com o texto copiado do Learn. O Verificador do Studio não o assinala. Mesmo assim é lixo dentro do texto do botão, e uma comparação com `"Voltar"` daria falso.
+
+O Studio exporta estes valores sem aspas YAML, coisa que o PyYAML recusa. A ferramenta lê-os na mesma, troca o tabulador por um espaço só para a análise, e reporta a linha. A correção certa é no Studio, apagando o tabulador em cada texto.

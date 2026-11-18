@@ -1,0 +1,18 @@
+{
+  "QualifiedValues": [
+    {
+      "Namespace": "Machines (Formulários)",
+      "Kind": "default.cds_dac_machine_forms",
+      "Values": {
+        "Informações": "e30ec15e-5c72-4282-9639-ab1bf707f91b"
+      }
+    },
+    {
+      "Namespace": "Machine Types (Formulários)",
+      "Kind": "default.cds_dac_machinetype_forms",
+      "Values": {
+        "Informações": "1bf420f9-3e83-4f02-b55d-d5867f8e1e69"
+      }
+    }
+  ]
+}

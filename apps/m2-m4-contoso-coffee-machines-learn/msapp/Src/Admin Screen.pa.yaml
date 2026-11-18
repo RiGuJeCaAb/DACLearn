@@ -1,0 +1,72 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Admin Screen:
+    Properties:
+      Fill: =RGBA(242, 239, 223, 1)
+      LoadingSpinnerColor: =RGBA(30, 14, 91, 1)
+    Children:
+      - Rectangle5:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Fill: =nfBrandingDark
+            Height: =75
+            Width: =1366
+      - Label4:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Color: =Color.White
+            Font: =Font.'Open Sans'
+            Height: =75
+            Size: =24
+            Text: ='Admin Screen'.Name
+            Width: =1366
+      - Button5:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =nfBrandingLight
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(30, 14, 91, 1), -20%)
+            OnSelect: =Back()
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Voltar	"
+            X: =1180
+            Y: =700
+      - Icon1:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            AccessibleLabel: ="Voltar"
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Color: =Color.White
+            Icon: =Icon.BackArrow
+            OnSelect: =Back(ScreenTransition.UnCoverRight)
+            TabIndex: =0
+            X: =20
+            Y: =5
+      - Icon4:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            AccessibleLabel: ="Ir para o ecrã inicial"
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Color: =Color.White
+            Icon: =Icon.Home
+            OnSelect: =Navigate('Home Screen')
+            TabIndex: =0
+            X: =1282
+            Y: =5

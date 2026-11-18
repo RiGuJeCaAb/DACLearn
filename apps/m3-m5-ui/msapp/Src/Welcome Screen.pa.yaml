@@ -1,0 +1,65 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Welcome Screen:
+    Properties:
+      Fill: =RGBA(29, 29, 29, 1)
+      LoadingSpinnerColor: =RGBA(3, 121, 137, 1)
+    Children:
+      - Rectangle1:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(69, 186, 184, 1)
+            Fill: =RGBA(3, 121, 137, 1)
+            Height: =80
+            Width: =Parent.Width
+      - Image1:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(69, 186, 184, 1)
+            Height: =70
+            Image: =User().Image
+            Width: =70
+            X: =40
+            Y: =5
+      - Label1:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(69, 186, 184, 1)
+            Color: =Color.White
+            Font: =Font.'Open Sans'
+            Text: ="Welcome, " & User().FullName
+            Width: =600
+            X: =Image1.X + Image1.Width + 20
+            Y: =20
+      - TextInput1:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            AccessibleLabel: ="Caixa de texto"
+            BorderColor: =RGBA(69, 186, 184, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 0, 0, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =RGBA(69, 186, 184, 1)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(16, 65, 71, 1)
+            Width: =400
+            X: =60
+            Y: =120
+      - Icon1:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            AccessibleLabel: ="Limpar caixa de texto"
+            BorderColor: =RGBA(69, 186, 184, 1)
+            Color: =RGBA(69, 186, 184, 1)
+            Icon: =Icon.Reset
+            OnSelect: =Reset(TextInput1)
+            TabIndex: =0
+            X: =TextInput1.X + TextInput1.Width + 10
+            Y: =TextInput1.Y

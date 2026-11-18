@@ -2,7 +2,7 @@
 
 Código e documentação do percurso Microsoft Learn [Create a canvas app in Power Apps](https://learn.microsoft.com/training/paths/create-powerapps/), feito para a UC **Desenvolvimento de Aplicações na Cloud** (CTeSP Computação Cloud, ESTGL/IPV, 2026/27).
 
-Os exercícios dos seis módulos vivem numa solução Power Platform própria, a **DACLearn** (nome visível "DAC Learn - Create a canvas app"), separada da [APP DAC2627](https://github.com/RiGuJeCaAb/DAC2627). A solução usa o mesmo editor, DAC CC MB (`daccc`, prefixo `dac`), e está no ambiente `94d3a652-b3a8-e2dd-9b54-025090fe6659`.
+Os exercícios dos seis módulos vivem numa solução Power Platform própria, a **DACLearn** (nome visível "DAC Learn · Create a canvas app"), separada da [APP DAC2627](https://github.com/RiGuJeCaAb/DAC2627). A solução usa o mesmo editor, DAC CC MB (`daccc`, prefixo `dac`), e está no ambiente `94d3a652-b3a8-e2dd-9b54-025090fe6659`.
 
 Tem nove canvas apps, uma delas biblioteca de componentes, e três tabelas Dataverse (Machine Type, Machine e ProductInventory). Os dados de origem são os ficheiros Excel do repositório [MicrosoftDocs/mslearn-developer-tools-power-platform](https://github.com/MicrosoftDocs/mslearn-developer-tools-power-platform), importados para o Dataverse pela Web API em vez de ficarem num Excel no OneDrive.
 
@@ -12,7 +12,7 @@ Os exercícios práticos dos seis módulos estão feitos. Os Módulos 2, 3, 4 e 
 
 O Verificador de soluções dá 0 problemas desde 12/11/2026 às 09:04, depois da correção de 97 avisos de acessibilidade.
 
-> **Falta a exportação 1.0.0.2.** O último zip (1.0.0.1, 12/11/2026 às 08:25) é anterior às correções de acessibilidade. As pastas `solution/` e `apps/` só ficam preenchidas depois de `python -m tools.learn sincronizar DACLearn_1_0_0_2.zip`. Até lá, este repositório tem a documentação, os dados de origem e as ferramentas, já testadas contra uma exportação real.
+O repositório tem a exportação **1.0.0.2** (18/11/2026), a primeira depois dessas correções. A validação passa sem erros nas 9 apps e deixa 5 avisos de tabuladores colados em textos, descritos em [`docs/qualidade.md`](docs/qualidade.md).
 
 ## Onde está o quê
 

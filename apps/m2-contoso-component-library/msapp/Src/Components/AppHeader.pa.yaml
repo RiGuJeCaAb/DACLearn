@@ -1,0 +1,41 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  AppHeader:
+    DefinitionType: CanvasComponent
+    AllowCustomization: true
+    CustomProperties:
+      HeaderTitle:
+        PropertyKind: Input
+        DisplayName: HeaderTitle
+        Description: Title text shown in the header
+        DataType: Text
+        Default: ="Contoso Coffee"
+    Properties:
+      Height: =80
+      Width: =1366
+    Children:
+      - Rectangle1:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Height: =Parent.Height
+            Width: =Parent.Width
+      - Label1:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =Color.White
+            Font: =Font.'Open Sans'
+            Height: =Parent.Height
+            Size: =24
+            Text: =AppHeader.HeaderTitle
+            Width: =Parent.Width

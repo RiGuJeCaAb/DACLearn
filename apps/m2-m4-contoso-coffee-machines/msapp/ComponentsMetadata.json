@@ -1,0 +1,12 @@
+{
+  "Components": [
+    {
+      "Name": "AppHeader",
+      "TemplateName": "677105124fd1415fafc39c676fc8d3a8",
+      "Description": "",
+      "AllowCustomization": true,
+      "IsWidget": false,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

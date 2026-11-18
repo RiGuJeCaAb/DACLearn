@@ -1,0 +1,143 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Home Screen:
+    Properties:
+      Fill: =RGBA(242, 239, 223, 1)
+      LoadingSpinnerColor: =RGBA(30, 14, 91, 1)
+    Children:
+      - Rectangle4:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Fill: =nfBrandingDark
+            Height: =75
+            Width: =1366
+      - Label3:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Color: =Color.White
+            Font: =Font.'Open Sans'
+            Height: =75
+            Size: =24
+            Text: ='Home Screen'.Name
+            Width: =1366
+      - Button2:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =nfBrandingLight
+            Font: =Font.'Open Sans'
+            Height: =100
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(30, 14, 91, 1), -20%)
+            OnSelect: =Navigate('Catalog Screen', ScreenTransition.Cover)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Exibir Catálogo	"
+            Width: =250
+            X: =200
+            Y: =200
+      - Button3:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =nfBrandingLight
+            Font: =Font.'Open Sans'
+            Height: =100
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(30, 14, 91, 1), -20%)
+            OnSelect: =Navigate('Admin Screen', ScreenTransition.Fade)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Text: ="Admin Screen	"
+            Width: =250
+            X: =200
+            Y: =350
+      - Dropdown1:
+          Control: Classic/DropDown@2.3.1
+          Properties:
+            AccessibleLabel: ="Navegação entre ecrãs"
+            BorderColor: =RGBA(92, 74, 168, 1)
+            ChevronBackground: =RGBA(30, 14, 91, 1)
+            ChevronFill: =RGBA(255, 255, 255, 1)
+            ChevronHoverBackground: =ColorFade(RGBA(30, 14, 91, 1), -20%)
+            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+            Default: =""
+            Font: =Font.'Open Sans'
+            HoverFill: =RGBA(185, 173, 246, 1)
+            Items: =["", "Catalog Screen", "Admin Screen"]
+            Items.Value: =Value
+            OnChange: =Switch(Self.Selected.Value, "Catalog Screen", Navigate('Catalog Screen', ScreenTransition.Cover), "Admin Screen", Navigate('Admin Screen', ScreenTransition.Cover)); Reset(Self)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(92, 74, 168, 1)
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(30, 14, 91, 1)
+            Width: =250
+            X: =80
+            Y: =32
+      - Label5:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Color: =Color.White
+            Font: =Font.'Open Sans'
+            Height: =32
+            Text: ="Screen Navigation	"
+            Width: =250
+            X: =80
+      - Image4:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Height: =65
+            Image: ="data:image/svg+xml;utf8," & EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='white'/><path d='M28 38h38v22a16 16 0 0 1-16 16h-6a16 16 0 0 1-16-16z' fill='rgb(3,131,135)'/><path d='M66 44h6a8 8 0 0 1 0 16h-6' fill='none' stroke='rgb(3,131,135)' stroke-width='5'/><path d='M40 30c0-6 6-6 6-12M52 30c0-6 6-6 6-12' stroke='rgb(51,74,95)' stroke-width='4' fill='none' stroke-linecap='round'/></svg>")
+            Width: =65
+            X: =5
+            Y: =5
+      - Image5:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Height: =75
+            Image: =User().Image
+            Width: =75
+            X: =1291
+      - Label6:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Right
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Color: =Color.White
+            Font: =Font.'Open Sans'
+            Height: =75
+            Text: =User().FullName
+            Width: =420
+            X: =866
+      - Label7:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(92, 74, 168, 1)
+            Font: =Font.'Open Sans'
+            Height: =30
+            Size: =8
+            Text: =User().Email
+            Width: =400
+            X: =20
+            Y: =728
