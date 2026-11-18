@@ -143,3 +143,21 @@ def test_tabulador_dentro_de_valor_e_aviso_e_nao_erro(repo, zipf, capsys):
     assert "AVISO" in out and "Catalog Screen.pa.yaml:" in out and "1 aviso(s)" in out
     assert ecra.read_text(encoding="utf-8") == original          # o ficheiro não é alterado
     assert correr(repo, "inventario") == 0                         # o inventário também lê
+
+
+def test_tabulador_na_indentacao_continua_a_ser_erro(repo, zipf, capsys):
+    correr(repo, "sincronizar", str(zipf), "--sem-docs")
+    ecra = repo / "apps" / "m2-m4-contoso-coffee-machines-learn" / "src" / "Catalog Screen.pa.yaml"
+    linhas = ecra.read_text(encoding="utf-8").split("\n")
+    linhas[3] = "\t" + linhas[3].lstrip(" ")
+    ecra.write_text("\n".join(linhas), encoding="utf-8")
+    assert correr(repo, "validar") == 1
+    assert "YAML inválido" in capsys.readouterr().out
+
+
+def test_tabulador_entre_aspas_tambem_e_aviso(repo, zipf, capsys):
+    correr(repo, "sincronizar", str(zipf), "--sem-docs")
+    ecra = repo / "apps" / "m2-m4-contoso-coffee-machines-learn" / "src" / "Catalog Screen.pa.yaml"
+    ecra.write_text(ecra.read_text(encoding="utf-8").replace('Text: ="Admin"', "Text: '=\"Admin\t\"'"), encoding="utf-8")
+    assert correr(repo, "validar") == 0
+    assert "1 aviso(s)" in capsys.readouterr().out

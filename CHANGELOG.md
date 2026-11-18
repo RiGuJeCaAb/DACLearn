@@ -2,6 +2,11 @@
 
 Formato: [Keep a Changelog](https://keepachangelog.com/pt-PT/1.1.0/). As versões da solução são as do portal (`1.0.0.N`).
 
+## [Repositório 1.0.2] · 2026-11-18
+
+- `yamlio.ler_tolerante` alinhado com a DAC2627 (PR #5, depois da revisão do Sourcery): as linhas com tabulador são devolvidas mesmo quando o PyYAML lê o ficheiro sozinho (tabulador entre aspas), e um tabulador na indentação continua a dar erro de YAML em vez de ser trocado por espaço.
+- 2 testes novos (15 no total).
+
 ## Solução 1.0.0.3 · 2026-11-18
 
 - "Contoso Coffee Machines Learn": tabulador retirado do fim de cinco textos (`Label5`, `Button2` e `Button3` no Home Screen, `Button5` no Admin Screen, `Button4` no Catalog Screen). Guardada e publicada no Studio.
