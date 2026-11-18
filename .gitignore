@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+build/
+.venv/
+
+# Os zips só entram em _export/, guardados pelo `learn sincronizar`
+*.zip
+!_export/*.zip
+
+# Ficheiros temporários do Excel e do sistema
+~$*
+.DS_Store
+Thumbs.db

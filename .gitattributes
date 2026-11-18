@@ -1,0 +1,21 @@
+# Exportação do Power Apps: atualizada só por `python -m tools.learn sincronizar`.
+# linguist-generated recolhe estes ficheiros nos diffs dos pull requests e tira-os das estatísticas
+# de linguagens. O conteúdo continua versionado e o `git diff` local não muda.
+solution/** linguist-generated=true
+apps/*/msapp/** linguist-generated=true
+_export/** linguist-generated=true
+docs/inventario.md linguist-generated=true
+dataverse/schema.md linguist-generated=true
+
+# Binários
+*.zip binary
+*.msapp binary
+*.xlsx binary
+*.png binary
+
+# Fontes e ferramentas com finais de linha Unix, como o Studio exporta os .pa.yaml
+*.pa.yaml text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf

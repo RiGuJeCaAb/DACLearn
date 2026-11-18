@@ -1,0 +1,16 @@
+[project]
+name = "daclearn-tools"
+version = "1.0.0"
+description = "Ferramentas do repositório DACLearn (percurso Microsoft Learn 'Create a canvas app in Power Apps')"
+requires-python = ">=3.10"
+dependencies = ["pyyaml>=6", "jsonschema>=4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools]
+packages = ["tools", "tools.learn"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

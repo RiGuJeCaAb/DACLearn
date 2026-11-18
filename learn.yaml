@@ -1,0 +1,69 @@
+# Configuração do repositório DACLearn.
+# Cada app da solução é extraída para apps/<pasta>/. A correspondência faz-se pelo nome visível
+# (DisplayName no customizations.xml). Uma app que não esteja aqui é extraída numa pasta com o nome
+# visível em minúsculas e hífenes, e o `sincronizar` avisa para a acrescentar.
+
+solucao:
+  nome: DACLearn
+  nome_visivel: "DAC Learn - Create a canvas app"
+  editor: daccc
+  prefixo: dac
+  ambiente: 94d3a652-b3a8-e2dd-9b54-025090fe6659
+
+percurso:
+  titulo: "Create a canvas app in Power Apps"
+  titulo_pt: "Criar uma aplicação de tela no Power Apps"
+  url: https://learn.microsoft.com/training/paths/create-powerapps/
+
+# modulo: número do módulo do Learn; passagem: 1 = primeira versão, 2 = segunda passagem à letra
+apps:
+  - nome_visivel: "DACLearn M1 Machines gerada"
+    pasta: m1-machines-gerada
+    modulo: 1
+    passagem: 1
+    descricao: App gerada a partir dos dados (tabela Machine)
+  - nome_visivel: "DACLearn M1 Modelo Split-screen"
+    pasta: m1-modelo-split-screen
+    modulo: 1
+    passagem: 1
+    descricao: App criada a partir de um modelo
+  - nome_visivel: "DACLearn M1 Copilot Product Inventory"
+    pasta: m1-copilot-product-inventory
+    modulo: 1
+    passagem: 1
+    descricao: App criada com o Copilot (tabela ProductInventory)
+  - nome_visivel: "Contoso Coffee Machines"
+    pasta: m2-m4-contoso-coffee-machines
+    modulo: "2, 4"
+    passagem: 1
+    descricao: Galeria, formulário, App.Formulas e UDF, navegação com transições
+  - nome_visivel: "Contoso Component Library"
+    pasta: m2-contoso-component-library
+    modulo: 2
+    passagem: 1
+    descricao: Biblioteca de componentes com o AppHeader (feita a mais, não está nas unidades)
+  - nome_visivel: "DACLearn M3 UI"
+    pasta: m3-m5-ui
+    modulo: "3, 5"
+    passagem: 1
+    descricao: Interface (temas, User(), Reset) e restauro de versões no Módulo 5
+  - nome_visivel: "DACLearn M6 Responsive"
+    pasta: m6-responsive
+    modulo: 6
+    passagem: 1
+    descricao: Esquema reativo com contentor de grelha
+  - nome_visivel: "Contoso Coffee Machines Learn"
+    pasta: m2-m4-contoso-coffee-machines-learn
+    modulo: "2, 3, 4"
+    passagem: 2
+    descricao: Segunda passagem à letra dos Módulos 2, 3 e 4
+  - nome_visivel: "DACLearn M6 Responsive Learn"
+    pasta: m6-responsive-learn
+    modulo: 6
+    passagem: 2
+    descricao: Segunda passagem à letra do Módulo 6
+
+tabelas:
+  - dac_machinetype
+  - dac_machine
+  - dac_productinventory
